@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17243b" />
+  <title>校園生存挑戰｜青春冒險 RPG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">✦</span><span>青春冒險 RPG</span></div>
+      <div class="topbar-tag">SCHOOL QUEST · 校園任務</div>
+    </header>
+
+    <section id="start-screen" class="screen start-screen active">
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+        <div class="school-building"><div class="roof"></div><div class="school-face"><div class="school-sign">SCHOOL</div><div class="windows"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="door"></div></div></div>
+        <div class="tree tree-left">♣</div><div class="tree tree-right">♣</div>
+        <div class="path"></div>
+        <div class="pixel-person"><div class="person-head"></div><div class="person-body"></div><div class="person-bag"></div><div class="person-legs"></div></div>
+      </div>
+      <div class="start-copy">
+        <p class="eyebrow">YOUR STORY STARTS HERE</p>
+        <h1>校園生存<br /><span>挑戰！</span></h1>
+        <p class="lead">新的學期、新的同學，還有各種意想不到的任務。<br />準備好迎接你的校園冒險了嗎？</p>
+        <div class="start-meta"><span>🎒 5 個校園事件</span><span>⭐ 累積你的勇氣值</span><span>🏆 解鎖專屬結局</span></div>
+        <button id="start-btn" class="primary-btn">開始冒險 <span>➜</span></button>
+        <p class="hint">小提醒：每個選擇都會影響你的冒險結果。</p>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen game-screen">
+      <div class="hud">
+        <div class="player-card"><div class="avatar">🧑‍🎓</div><div><strong>校園新手</strong><small id="chapter-label">DAY 01 · 新生報到</small></div></div>
+        <div class="stats"><div class="stat"><span>⭐</span><div><small>勇氣值</small><strong id="score">0</strong></div></div><div class="stat"><span>📍</span><div><small>任務進度</small><strong id="progress">0 / 5</strong></div></div></div>
+      </div>
+      <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+      <div class="scene-card">
+        <div class="scene-banner" id="scene-banner"><span id="scene-emoji">🏫</span><span id="scene-location">校園・第一站</span><span class="scene-chip" id="scene-chip">MAIN QUEST</span></div>
+        <div class="scene-content">
+          <p class="eyebrow" id="scene-kicker">MISSION 01</p>
+          <h2 id="scene-title">新的開始</h2>
+          <p id="scene-text" class="scene-text"></p>
+          <div class="choice-label">你會怎麼做？ <span>SELECT YOUR ACTION</span></div>
+          <div id="choices" class="choices"></div>
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+          <button id="next-btn" class="primary-btn next-btn hidden">下一個任務 <span>➜</span></button>
+        </div>
+      </div>
+      <p class="bottom-note">✦ 每個人都有自己的步調，勇敢求助也是一種能力。</p>
+    </section>
+
+    <section id="end-screen" class="screen end-screen">
+      <div class="end-icon" id="end-icon">🏆</div>
+      <p class="eyebrow">ADVENTURE COMPLETE</p>
+      <h2 id="end-title">你的校園冒險完成了！</h2>
+      <p id="end-description" class="end-description"></p>
+      <div class="result-card">
+        <div><small>最終勇氣值</small><strong id="final-score">0</strong></div>
+        <div><small>完成任務</small><strong>5 / 5</strong></div>
+        <div><small>冒險評價</small><strong id="rank">—</strong></div>
+      </div>
+      <div class="end-message" id="end-message"></div>
+      <button id="restart-btn" class="primary-btn">再次挑戰 <span>↻</span></button>
+      <p class="hint">不同的選擇，可能帶你走向不同的結局喔！</p>
+    </section>
+
+    <footer class="footer"><span>校園生存挑戰</span><span>LEARN · CHOOSE · GROW</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
